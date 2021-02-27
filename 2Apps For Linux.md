@@ -28,3 +28,18 @@
 26. htop
 27. rofi
 28. 添加.sh 到.config/i3/config for multiple monitors
+
+#生成package list批量安装programs
+1. 生成 community list
+```
+sudo pacman -Qqen > communityPackages.txt
+```
+2. 生成 AUR list
+```
+sudo pacman -Qqem > aurPackages.txt
+```
+3. 用的时候
+```
+sudo pacman -S < communityPackages.txt
+yay -S < aurPackages.txt
+```
