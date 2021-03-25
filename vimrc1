@@ -1,0 +1,63 @@
+set shortmess=atI
+set encoding=utf-8
+set fileencodings=utf-8,ucs-bom,cp936,gb18030,latin1
+set nocompatible
+set background=dark
+
+set nu relativenumber 
+set mouse=a
+set cursorline
+set scrolloff=7
+set backspace=indent,eol,start
+set nohlsearch
+set incsearch
+set nowrap
+set hidden
+set textwidth=80
+set colorcolumn=+1
+set signcolumn=yes
+
+set noswapfile
+set nobackup
+set undofile
+set undodir=~/.vim/undo
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set smartindent
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'mattn/emmet-vim'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'cocopon/iceberg.vim', {'as': 'iceberg'}
+Plug 'junegunn/goyo.vim'
+
+call plug#end()
+filetype plugin indent on
+let g:NERDTreeWinSize=20
+set termguicolors
+colorscheme dracula
+
+augroup WrapLineInTextFile
+    autocmd!
+    autocmd FileType markdown setlocal wrap linebreak shiftwidth=2 tabstop=4 softtabstop=2 
+    autocmd FileType css setlocal shiftwidth=2 softtabstop=2
+augroup END
+
+let mapleader="\\"
+nnoremap <leader>ev :e $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>zz :wqa!<cr>
+nnoremap <leader><F2> :NERDTreeToggle<cr>
+nnoremap <leader>og :Goyo<cr>
+nnoremap <leader>cg :Goyo!<cr>
+inoremap jk <esc>
+inoremap <leader><c-u> <esc>bveUea "uppercase
+inoremap <leader><c-b> <esc>0i
+
