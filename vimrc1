@@ -60,4 +60,4 @@ nnoremap <leader>cg :Goyo!<cr>
 inoremap jk <esc>
 inoremap <leader><c-u> <esc>bveUea "uppercase
 inoremap <leader><c-b> <esc>0i
-
+inoremap <leader><c-e> <esc><S-4>i "to beginning of the line S->Shift
