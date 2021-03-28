@@ -32,7 +32,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim' "mustDo cp ~/.vim/plugged/emme-vim/autoload/emmet.vim ~/.vim/autoload/ cp -a ~/.vim/plugged/emmet-vim/autoload/emmet ~/.vim/autoload/
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'cocopon/iceberg.vim', {'as': 'iceberg'}
@@ -48,6 +48,7 @@ augroup WrapLineInTextFile
     autocmd!
     autocmd FileType markdown setlocal wrap linebreak shiftwidth=2 tabstop=4 softtabstop=2 
     autocmd FileType css setlocal shiftwidth=2 softtabstop=2
+    autocmd FileType html setlocal shiftwidth=2 softtabstop=2
 augroup END
 
 let mapleader="\\"
